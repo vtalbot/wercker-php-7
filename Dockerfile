@@ -16,7 +16,7 @@ RUN apt-get update && \
       curl \
       git \
       php7.0-sqlite3 \
-      php7.0-redis \s
+      php7.0-redis \
       && \
     docker-php-ext-install mcrypt zip bz2 mbstring && \
     docker-php-ext-enable opcache && \
