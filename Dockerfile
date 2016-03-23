@@ -24,6 +24,7 @@ RUN apt-get update && \
     echo "date.timezone = $TZ" > /usr/local/etc/php/conf.d/timezone.ini && \
     echo "memory_limit=1024M" > /usr/local/etc/php/conf.d/memory_limit.ini && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    composer global require hirak/prestissimo && \
     mkdir -p ~/.ssh /root/.ssh /etc/ssh
 
 CMD ["php"]
